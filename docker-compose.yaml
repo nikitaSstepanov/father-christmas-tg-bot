@@ -1,12 +1,9 @@
-version: '3.9'
 
 services:
-
   bot:
     container_name: "bot"
     build: 
-      context: ./
-    env_file:
-      - .env
-    command: ["npm", "run", "start:prod"]
+      context: .
+      dockerfile: dockerfile
+    command: ["npm", "run", "start"]
     
